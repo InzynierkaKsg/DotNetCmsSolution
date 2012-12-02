@@ -1,0 +1,11 @@
+﻿.editPane {
+        position: absolute;
+        display: block;
+        right: 0;
+        bottom: 0;      
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        
+        
+    }

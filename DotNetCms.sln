@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetCms", "DotNetCms\", "{574A9D74-9A82-47F3-B172-9F5856B88B68}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/DotNetCms"
+		Debug.AspNetCompiler.PhysicalPath = "DotNetCms\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DotNetCms\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DotNetCms"
+		Release.AspNetCompiler.PhysicalPath = "DotNetCms\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DotNetCms\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7782"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DotNetCmsInstaller", "DotNetCmsInstaller\DotNetCmsInstaller.vdproj", "{CF92136D-A3EB-4BFE-BA06-A7C23E408E85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CF92136D-A3EB-4BFE-BA06-A7C23E408E85}.Debug|Any CPU.ActiveCfg = Debug
+		{CF92136D-A3EB-4BFE-BA06-A7C23E408E85}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

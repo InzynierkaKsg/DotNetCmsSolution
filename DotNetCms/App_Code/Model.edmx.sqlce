@@ -1,0 +1,70 @@
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server Compact Edition
+-- --------------------------------------------------
+-- Date Created: 11/21/2012 22:18:44
+-- Generated from EDMX file: C:\Users\Rafalek\Desktop\gicior\DotNetCms\App_Code\Model.edmx
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- NOTE: if the constraint does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- NOTE: if the table does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    DROP TABLE [PageSet];
+GO
+    DROP TABLE [AllPagesSet];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'PageSet'
+CREATE TABLE [PageSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Content] ntext  NOT NULL
+);
+GO
+
+-- Creating table 'AllPagesSet'
+CREATE TABLE [AllPagesSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Logo] nvarchar(4000)  NOT NULL,
+    [ColorR] int  NOT NULL,
+    [ColorG] int  NOT NULL,
+    [ColorB] int  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [Id] in table 'PageSet'
+ALTER TABLE [PageSet]
+ADD CONSTRAINT [PK_PageSet]
+    PRIMARY KEY ([Id] );
+GO
+
+-- Creating primary key on [Id] in table 'AllPagesSet'
+ALTER TABLE [AllPagesSet]
+ADD CONSTRAINT [PK_AllPagesSet]
+    PRIMARY KEY ([Id] );
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------
