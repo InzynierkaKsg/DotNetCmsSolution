@@ -84,10 +84,10 @@ function changeColor(red, green, blue) {
         'backgroundColor':
             '#' + hex
     });
-    setStyleId('basicnav', {
-        'background':
-            '#' + hex
-    });
+//    setStyleId('basicnav', {
+//        'background':
+//            '#' + hex
+//    });
     setStyleClass('navbar', {
         'border':
             '1px solid #' + hex3

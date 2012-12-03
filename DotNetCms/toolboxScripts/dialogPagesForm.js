@@ -63,10 +63,10 @@ $(function () {
                 $('#' + id).remove();
             }
 
-            if (isChanged)
-                $("#menuNav").load(location.href + " #menuNav>*", function () {
-                    $.getScript("hover.js");
-                });
+            if (isChanged) {
+                location.reload();
+               
+            }
         }
     });
 

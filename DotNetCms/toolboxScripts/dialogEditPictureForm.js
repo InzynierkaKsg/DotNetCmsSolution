@@ -94,7 +94,7 @@ $(function () {
                 else
                     $("#contentUL").load(location.href + " #contentUL>*", function () {
                         $('.tooltp').tooltip();
-                        $.getScript("hover.js");
+                        $.getScript("../hover.js");
                     });
             }
         }

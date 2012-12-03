@@ -34,13 +34,34 @@ $(function () {
             }
         },
         close: function () {
-            var pageName = $("#newPage");
+            var pageName = $("#newPage"),
+             navColor2;
+            if (jQuery.browser.msie)
+                navColor2 = $('#prettynav').css('backgroundColor');
+            else {
+                navColor2 = $('#prettynav').css('backgroundImage');
+                if (jQuery.browser.chrome) {
+                    navColor2 = navColor2.replace('-webkit-linear-gradient(top, ', '');
+                    navColor2 = navColor2.replace('-webkit-gradient(linear, 0% 0%, 0% 100%, from(', '');
+                }
+                if (jQuery.browser.mozilla)
+                    navColor2 = navColor2.replace('-moz-linear-gradient(50% 0%, ', '');
+                if (jQuery.browser.opera)
+                    navColor2 = navColor2.replace('-o-linear-gradient(top, ', '');
+
+                navColor2 = navColor2.slice(0, navColor2.indexOf(')') + 1);
+            }
+
+            navColor2 = navColor2.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 
             pageName.val('').removeClass("ui-state-error");
-            if (isChanged)
+            if (isChanged) {
                 $("#menuNav").load(location.href + " #menuNav>*", function () {
-                    $.getScript("hover.js");
+                    $.getScript("../hover.js");
                 });
+                changeColor(setZero(navColor2[1]),
+                     setZero(navColor2[2]), setZero(navColor2[3]));
+            }
         }
     });
 });

@@ -35,7 +35,7 @@ $(function () {
         close: function () {
             if(isChanged)
                 setTimeout('$("#contentUL").load(location.href + " #contentUL>*",'
-                    + ' function () { $(".tooltp").tooltip(); $.getScript("hover.js");});', 1000);
+                    + ' function () { $(".tooltp").tooltip(); $.getScript("../hover.js");});', 1000);
         }
     });
 });
