@@ -40,7 +40,7 @@ $(function () {
 
                     $.ajax({
                         type: "POST",
-                        url: "FileUploaderHandler.ashx",
+                        url: "../FileUploaderHandler.ashx",
                         contentType: false,
                         processData: false,
                         data: data,
