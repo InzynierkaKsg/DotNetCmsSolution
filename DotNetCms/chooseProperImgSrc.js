@@ -8,46 +8,35 @@
     function chooseProperImageFiles() {
         $(function () {
             var winW = document.body.clientWidth;
-            if (winW < 800) {
-                var images = document.querySelectorAll('ul#contentUL img');
-                for (var j = 0; j < images.length; j++) {
-                    var fileName = getFileNameWithoutPrefix(images[j].src);
-                    images[j].src = '/images/small_' + fileName;
-                }
+            var contentDiv = document.getElementById("contentUL");
+            var images = contentDiv.getElementsByTagName("img");
+            for (var j = 0; j < images.length; j++) {
+                var fileName = getFileNameWithoutPrefix(images[j].src);
 
-            }
-            if (winW >= 800 && winW < 1200) {
-                var images = document.querySelectorAll('ul#contentUL img');
-                for (var j = 0; j < images.length; j++) {
-                    var fileName = getFileNameWithoutPrefix(images[j].src);
-                    images[j].src = '/images/medium_' + fileName;
+                if (winW < 800) {
+                    images[j].src = '/DotNetCms/images/small_' + fileName;
                 }
-            }
-            else {
-                var images = document.querySelectorAll('ul#contentUL img');
-                for (var j = 0; j < images.length; j++) {
-                    var fileName = getFileNameWithoutPrefix(images[j].src);
-                    images[j].src = '/images/original_' + fileName;
+                else {
+                    if (winW >= 800 && winW < 1200) {
+                        images[j].src = '/DotNetCms/images/medium_' + fileName;
+                    }
+                    else {
+                        images[j].src = '/DotNetCms/images/original_' + fileName;
+                    }
                 }
             }
         });
 
         function getFileNameWithoutPrefix(currFile) {
-            splitPath = currFile.split("/");
+            var splitPath = currFile.split("/");
             var currImgName = splitPath[splitPath.length - 1];
-
-            alert(currImgName);
-
-            var i = 0;
-            for (; i < currImgName; i++) {
+            var i;
+            for (i = 0; i < currImgName.length; i++) {
                 if (currImgName[i] === '_') {
                     break;
                 }
             }
-            alert(currImgName.substring(i));
-            return currImgName.substring(i);
+            return currImgName.substring(i + 1);
         }
-
-
     }
 });
