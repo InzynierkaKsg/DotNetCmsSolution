@@ -13,9 +13,15 @@ $(function () {
             change: refreshSwatch
         });
 
-        $("#redSlider").slider("value", navColor[1]);
-        $("#greenSlider").slider("value", navColor[2]);
-        $("#blueSlider").slider("value", navColor[3]);
+         WebService.GetColorR(callback);
+         function callback(result) {$("#redSlider").slider("value", result);}
+         WebService.GetColorG(callback1);
+         function callback1(result1) {$("#greenSlider").slider("value", result1);}
+         WebService.GetColorB(callback2);
+         function callback2(result2) {$("#blueSlider").slider("value", result2);}
+//        $("#redSlider").slider("value", navColor[1]);
+//        $("#greenSlider").slider("value", navColor[2]);
+//        $("#blueSlider").slider("value", navColor[3]);
         $("#picker").dialog('open');
     });
 
@@ -31,14 +37,19 @@ $(function () {
         autoOpen: false,
         modal: true,
         width: 500,
+        open: function () {
+
+
+            
+        },
         buttons: {
             Ok: function () {
                 var red = $("#redSlider").slider("value"),
                     green = $("#greenSlider").slider("value"),
                     blue = $("#blueSlider").slider("value");
 
-                 WebService.UpdateColor(red, green, blue);
-                
+                WebService.UpdateColor(red, green, blue);
+
                 changeColor(red, green, blue);
                 $(this).dialog("close");
             }

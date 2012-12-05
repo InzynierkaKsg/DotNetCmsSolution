@@ -142,15 +142,33 @@ public class WebService : System.Web.Services.WebService {
         mc.SaveChanges();
     }
 
-    //[WebMethod]
-    //public int GetColorR()
-    //{
-    //    ModelContainer1 mc = new ModelContainer1();
-    //    var page = (from x in mc.AllPagesSet select x).First();
+    [WebMethod]
+    public int GetColorR()
+    {
+        ModelContainer1 mc = new ModelContainer1();
+        var page = (from x in mc.AllPagesSet select x).First();
 
-    //    return page.ColorR;
+        return page.ColorR;
         
-    //}
+    }
+    [WebMethod]
+    public int GetColorG()
+    {
+        ModelContainer1 mc = new ModelContainer1();
+        var page = (from x in mc.AllPagesSet select x).First();
+
+        return page.ColorG;
+
+    }
+    [WebMethod]
+    public int GetColorB()
+    {
+        ModelContainer1 mc = new ModelContainer1();
+        var page = (from x in mc.AllPagesSet select x).First();
+
+        return page.ColorB;
+
+    }
 
     
 }
