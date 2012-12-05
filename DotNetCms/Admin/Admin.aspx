@@ -44,6 +44,7 @@
 
     <script type="text/javascript" src="../jquery.highlightEdit.js"></script>
     <script type="text/javascript" src="../hover.js"></script>
+    <script type="text/javascript" src="../refresh.js"></script>
 
     <title>DotNetCMS</title>
     <script type="text/javascript">

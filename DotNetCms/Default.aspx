@@ -29,6 +29,9 @@
     <script type="text/javascript" src="jquery-ui-map/jquery.ui.map.extensions.js"></script>
      
     <script type="text/javascript" src="hover.js"></script>
+    <script type="text/javascript" src="refresh.js"></script>
+    <script type="text/javascript">$(function () { $('.tooltp').attr('title', ''); });</script>
+    
     
     <title>DotNetCMS</title>
 </head>

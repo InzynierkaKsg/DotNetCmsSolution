@@ -27,6 +27,7 @@ $(function () {
                 $("#contentUL").load(location.href + " #contentUL>*", function () {
                     $('.tooltp').tooltip();
                     $.getScript("../hover.js");
+                    $.getScript("../refresh.js");
                 });
         }
     });

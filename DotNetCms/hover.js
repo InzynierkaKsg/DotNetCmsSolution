@@ -179,10 +179,4 @@ $(function () {
             $('#basicnav2').css('border', 'none');
         }
     });
-
-    $('.tabs1').tabs();
-    $(".accordion").find('span').remove();
-    $(".accordion").accordion({
-        heightStyle: "content"
-    });
 });

@@ -58,6 +58,7 @@ $(function () {
             if (isChanged) {
                 $("#menuNav").load(location.href + " #menuNav>*", function () {
                     $.getScript("../hover.js");
+                    $.getScript("../refresh.js");
                     changeColor(setZero(parseInt(navColor2[1])),
                      setZero(parseInt(navColor2[2])), setZero(parseInt(navColor2[3])));
                 });
