@@ -4,7 +4,9 @@ $(function () {
     $('.tabs1').tabs();
     $(".accordion").find('span').remove();
     $(".accordion").accordion({
-        heightStyle: "content"
+        heightStyle: "content",
+        collapsible: true,
+        active: false
     });
 
   

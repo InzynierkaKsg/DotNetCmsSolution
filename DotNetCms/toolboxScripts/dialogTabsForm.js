@@ -124,7 +124,9 @@ $(function () {
                         $($(this).data('item')).tabs();
                     else if ($(this).data('option') == 3)
                         $(".accordion").accordion({
-                            heightStyle: "content"
+                            heightStyle: "content",
+                            collapsible: true,
+                            active: false
                         });
                     else {
                         getcolor();
