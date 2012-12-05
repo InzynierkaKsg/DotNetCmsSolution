@@ -22,7 +22,7 @@
     <script type="text/javascript" src="Gumby/js/main.js"></script>
 
     <script type="text/javascript" src="toolboxScripts/color.js"></script>
-    <script type="text/javascript" src="chooseProperImgSrc.js"></script>
+   <%-- <script type="text/javascript" src="chooseProperImgSrc.js"></script>--%>
 
     <script type="text/javascript" src="jquery-ui-map/jquery.ui.map.js"></script>
     <script type="text/javascript" src="jquery-ui-map/jquery.ui.map.services.js"></script>
