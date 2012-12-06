@@ -1,8 +1,6 @@
 $(function () {
 
     $("#contentColor").click(function () {
-        var navColor = $('#basicnav').css('background-color');
-        navColor = navColor.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 
         $("#redSlider, #greenSlider, #blueSlider").slider({
             orientation: "horizontal",
@@ -13,15 +11,12 @@ $(function () {
             change: refreshSwatch
         });
 
-         WebService.GetColorR(callback);
-         function callback(result) {$("#redSlider").slider("value", result);}
-         WebService.GetColorG(callback1);
-         function callback1(result1) {$("#greenSlider").slider("value", result1);}
-         WebService.GetColorB(callback2);
-         function callback2(result2) {$("#blueSlider").slider("value", result2);}
-//        $("#redSlider").slider("value", navColor[1]);
-//        $("#greenSlider").slider("value", navColor[2]);
-//        $("#blueSlider").slider("value", navColor[3]);
+        WebService.GetColorR(callback);
+        function callback(result) { $("#redSlider").slider("value", result); }
+        WebService.GetColorG(callback1);
+        function callback1(result1) { $("#greenSlider").slider("value", result1); }
+        WebService.GetColorB(callback2);
+        function callback2(result2) { $("#blueSlider").slider("value", result2); }
         $("#picker").dialog('open');
     });
 
@@ -40,7 +35,7 @@ $(function () {
         open: function () {
 
 
-            
+
         },
         buttons: {
             Ok: function () {
@@ -95,10 +90,10 @@ function changeColor(red, green, blue) {
         'backgroundColor':
             '#' + hex
     });
-//    setStyleId('basicnav', {
-//        'background':
-//            '#' + hex
-//    });
+    //    setStyleId('basicnav', {
+    //        'background':
+    //            '#' + hex
+    //    });
     setStyleClass('navbar', {
         'border':
             '1px solid #' + hex3

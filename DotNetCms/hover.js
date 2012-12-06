@@ -1,5 +1,14 @@
 $(function () {
-    var navColor2, color2, color3, color4;
+    var navColor2, color2, color3, color4,
+        linki = $('.hovGradient');
+
+    if (document.body.clientWidth < 767) {
+        linki.css("background", '#fff');
+        linki.css('box-shadow', 'none');
+        linki.css('text-shadow', 'none');
+        $('#basicnav').css('border', 'none');
+        $('#basicnav2').css('border', 'none');
+    }
 
     function getcolor() {
         if (jQuery.browser.msie)
@@ -139,8 +148,6 @@ $(function () {
     });
 
     $(window).resize(function () {
-        var linki = $('.hovGradient');
-
         getcolor();
 
         if (document.body.clientWidth > 767) {

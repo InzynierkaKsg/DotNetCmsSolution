@@ -24,11 +24,7 @@ $(function () {
             $($(this).data('item')).html($("#dialogAddTextEditor").htmlarea('html', "Clickt to edit."));
 
             if (isChanged)
-                $("#contentUL").load(location.href + " #contentUL>*", function () {
-                    $('.tooltp').tooltip();
-                    $.getScript("../hover.js");
-                    $.getScript("../refresh.js");
-                });
+                $.getScript("../refresh.js");
         }
     });
 });
