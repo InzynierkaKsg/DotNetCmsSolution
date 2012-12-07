@@ -83,21 +83,25 @@ $(function () {
             file = $("#choosePictureEdit"),
             allFields = $([]).add(url).add(file);
 
+            if (isChanged) {
+                if ($(this).data('logo'))
+                    $("#logo").load(location.href + " #logo>*", '');
+                else
+                    if ($('#selectedPictureEdit')[0].childNodes[0].data == "Select File")
+                        $("#contentUL").load(location.href + " #contentUL>*", function () {
+                            $('.tooltp').tooltip();
+                            $.getScript("../refresh.js");
+                        });
+                    else
+                        $.getScript("../refresh.js");
+            }
+
             $('#selectFilePictureEdit').css('display', 'none');
             $('#urlPictureEdit').css('display', 'block');
             $('#selectedPictureEdit')[0].childNodes[0].data = "Url"
 
             allFields.val("").removeClass("ui-state-error");
-            if (isChanged) {
-                if ($(this).data('logo'))
-                    $("#logo").load(location.href + " #logo>*", '');
-                else
-                    $("#contentUL").load(location.href + " #contentUL>*", function () {
-                        $('.tooltp').tooltip();
-                        $.getScript("../hover.js");
-                        $.getScript("../refresh.js");
-                    });
-            }
+
         }
     });
 
