@@ -82,7 +82,7 @@ public class WebService : System.Web.Services.WebService {
         ModelContainer1 mc = new ModelContainer1();
         var newPage = new Page();
         newPage.Name = name;
-        newPage.Content = "<li class='editable'>Witaj na nowej stronie!</li>";
+        newPage.Content = "<li class='editable'>Welcome to the new site!</li><li>&#160;</li>";
         mc.AddToPageSet(newPage);
         mc.SaveChanges();
         

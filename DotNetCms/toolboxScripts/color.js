@@ -160,57 +160,7 @@ function changeColor(red, green, blue) {
         $('#prettynav > ul > li:first-child > a').css('boxShadow', 'none');
 
     }
-    else if (jQuery.browser.msie) {
-        setStyleClass('pretty.navbar', {
-            'background':
-                ' #' + hex
-        });
-        setStyleClass('pretty.navbar > ul > li', {
-            'background':
-                ' #' + hex
-        });
-        setStyleClass('pretty.navbar > ul > li > a', {
-            'background':
-                ' #' + hex
-        });
-        setStyleClass('navbar a.toggle', {
-            'background':
-                ' #' + hex
-        });
-        setStyleClass('pretty.tabs li.active a', {
-            'filter':
-                "progid:DXImageTransform.Microsoft.gradient"
-                + "( startColorstr='#" + hex + "', endColorstr='#"
-                + hex2 + "',GradientType=0 "
-        });
-        setStyleClass('pretty.navbar > ul > li:first-child,'
-            + ' .pretty.navbar > ul > li:first-child a:hover', {
-                'box-shadow':
-                    'none'
-            });
-        setStyleClass('navbar > ul > li > a', {
-            'text-shadow':
-                '2px 2px 2px #111111'
-        });
-        setStyleClass('navbar ul li', {
-            'border-right':
-                '1px solid #' + hex3
-        });
-        setStyleClass('navbar > ul > li:last-child, .navbar > ul > li:last-child a:hover', {
-            'border-right':
-                'none'
-        });
-
-        setStyleClass('pretty.tabs li.active a', {
-            'box-shadow':
-                'inset 0 1px 1px #' + hex4 + ', 0 1px 0 #' + hex3 + ', 0 -1px 0 #'
-                + hex3 + ', 1px 0 0 #' + hex3 + ', -1px 0 0 #' + hex3
-        });
-
-        $('#tog').css('box-shadow', 'inset 0 1px 1px #' + hex4 + ', 0 1px 1px #' + hex4);
-        $('#prettynav > ul > li > a').css('box-shadow', 'inset 1px 0 0 #' + hex4);
-        $('#prettynav > ul > li:first-child > a').css('box-shadow', 'none');
-    }
+   
     else if (jQuery.browser.mozilla) {
         setStyleClass('pretty.navbar', {
             'background':
@@ -311,6 +261,57 @@ function changeColor(red, green, blue) {
                 + ', 1px 0 0 #' + hex3 + ', -1px 0 0 #' + hex3,
             'textShadow':
                 '0 2px 1px #' + hex2 + ', 0 1px 1px #' + hex2
+        });
+
+        $('#tog').css('box-shadow', 'inset 0 1px 1px #' + hex4 + ', 0 1px 1px #' + hex4);
+        $('#prettynav > ul > li > a').css('box-shadow', 'inset 1px 0 0 #' + hex4);
+        $('#prettynav > ul > li:first-child > a').css('box-shadow', 'none');
+    }
+    else {
+        setStyleClass('pretty.navbar', {
+            'background':
+                ' #' + hex
+        });
+        setStyleClass('pretty.navbar > ul > li', {
+            'background':
+                ' #' + hex
+        });
+        setStyleClass('pretty.navbar > ul > li > a', {
+            'background':
+                ' #' + hex
+        });
+        setStyleClass('navbar a.toggle', {
+            'background':
+                ' #' + hex
+        });
+        setStyleClass('pretty.tabs li.active a', {
+            'filter':
+                "progid:DXImageTransform.Microsoft.gradient"
+                + "( startColorstr='#" + hex + "', endColorstr='#"
+                + hex2 + "',GradientType=0 "
+        });
+        setStyleClass('pretty.navbar > ul > li:first-child,'
+            + ' .pretty.navbar > ul > li:first-child a:hover', {
+                'box-shadow':
+                    'none'
+            });
+        setStyleClass('navbar > ul > li > a', {
+            'text-shadow':
+                '2px 2px 2px #111111'
+        });
+        setStyleClass('navbar ul li', {
+            'border-right':
+                '1px solid #' + hex3
+        });
+        setStyleClass('navbar > ul > li:last-child, .navbar > ul > li:last-child a:hover', {
+            'border-right':
+                'none'
+        });
+
+        setStyleClass('pretty.tabs li.active a', {
+            'box-shadow':
+                'inset 0 1px 1px #' + hex4 + ', 0 1px 0 #' + hex3 + ', 0 -1px 0 #'
+                + hex3 + ', 1px 0 0 #' + hex3 + ', -1px 0 0 #' + hex3
         });
 
         $('#tog').css('box-shadow', 'inset 0 1px 1px #' + hex4 + ', 0 1px 1px #' + hex4);
