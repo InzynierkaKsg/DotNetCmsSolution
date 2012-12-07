@@ -7,6 +7,11 @@ using System.Web.UI.WebControls;
 
 using System.Web.Security;
 using AdminModel;
+using System.Security.Cryptography;
+using System.Text;
+
+
+
 
 public partial class Login : System.Web.UI.Page
 {
@@ -14,15 +19,30 @@ public partial class Login : System.Web.UI.Page
     {
 
     }
+
+    public string EncodePassword(string originalPassword)
+    {
+        Byte[] originalBytes;
+        Byte[] encodedBytes;
+        MD5 md5;
+
+        md5 = new MD5CryptoServiceProvider();
+        originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
+        encodedBytes = md5.ComputeHash(originalBytes);
+
+        return BitConverter.ToString(encodedBytes);
+    }
+
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
     {
         AdminModelContainer model = new AdminModelContainer();
 
         AdminModel.Admin record = null;
 
+        string encodePassword = EncodePassword(Login1.Password);
         try
         {
-            record = (from x in model.AdminSet where x.Login == Login1.UserName && x.Password == Login1.Password select x).First();
+            record = (from x in model.AdminSet where x.Login == Login1.UserName && x.Password == encodePassword select x).First();
         }
         catch (Exception)
         { }

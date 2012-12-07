@@ -7,6 +7,8 @@ using Model;
 using System.Web.Security;
 using System.IO;
 using AdminModel;
+using System.Security.Cryptography;
+using System.Text;
 
 /// <summary>
 /// Summary description for WebService
@@ -40,15 +42,38 @@ public class WebService : System.Web.Services.WebService {
     {
         AdminModelContainer mc = new AdminModelContainer();
         var admin = (from x in mc.AdminSet select x).First();
-        admin.Password = password;
+
+        admin.Password = EncodePassword(password);
         mc.SaveChanges();
+    }
+
+    
+    public string EncodePassword(string originalPassword)
+    {
+        Byte[] originalBytes;
+        Byte[] encodedBytes;
+        MD5 md5;
+
+        md5 = new MD5CryptoServiceProvider();
+        originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
+        encodedBytes = md5.ComputeHash(originalBytes);
+
+        return BitConverter.ToString(encodedBytes);
     }
 
 
     [WebMethod]
-    public void LogOut()
+    public bool LogOut()
     {
-        FormsAuthentication.SignOut();
+        try
+        {
+            FormsAuthentication.SignOut();
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 
     [WebMethod]

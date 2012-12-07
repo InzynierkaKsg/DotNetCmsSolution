@@ -67,13 +67,13 @@
                 </div>
             </div>
 
-            <div class="row">
+            <%--<div class="row">
                 <div class="twelve columns">
                     <p id="footer">
                         Stopka
                     </p>
                 </div>
-            </div>
+            </div>--%>
         </div>
 
         <div id="currentPage" style="display: none"><%= PageId%></div>

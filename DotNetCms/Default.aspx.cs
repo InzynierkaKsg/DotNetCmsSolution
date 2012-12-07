@@ -43,7 +43,7 @@ public partial class _Default : System.Web.UI.Page
 
         cs.RegisterStartupScript(this.GetType(), "changecColor", "changeColor(" + contentForAllPages.ColorR + "," + contentForAllPages.ColorG + "," + contentForAllPages.ColorB + ");", true);
 
-        var defaultPage = (from x in mc.PageSet select x).First();
+        var defaultPage = (from x in mc.PageSet orderby x.Id ascending select x).First();
 
         PagesCollection = "";
 
