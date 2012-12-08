@@ -15,7 +15,7 @@ $(function () {
             isChanged = false;
         },
         buttons: {
-            Add: function () {
+            Save: function () {
                 var newPassword = $("#newPassword"),
                 newPasswordRepeat = $("#newPasswordRepeat"),
                 bValid = true;

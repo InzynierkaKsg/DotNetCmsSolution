@@ -65,7 +65,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="AdminModel" >
-        <EntityTypeShape EntityType="AdminModel.Admin" Width="1.5" PointX="10.125" PointY="2" />
+        <EntityTypeShape EntityType="AdminModel.Admin" Width="1.5" PointX="5.5" PointY="1.75" Height="1.59568359375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

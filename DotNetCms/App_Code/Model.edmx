@@ -98,8 +98,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model" >
-        <EntityTypeShape EntityType="Model.Page" Width="1.5" PointX="4.875" PointY="1.5" Height="1.787985026041667" />
-        <EntityTypeShape EntityType="Model.AllPages" Width="1.5" PointX="6.875" PointY="1.5" />
+        <EntityTypeShape EntityType="Model.Page" Width="1.5" PointX="4.75" PointY="1.625" Height="1.59568359375" />
+        <EntityTypeShape EntityType="Model.AllPages" Width="1.5" PointX="6.5" PointY="1.375" Height="1.9802864583333331" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

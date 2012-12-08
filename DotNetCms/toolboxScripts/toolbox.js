@@ -101,14 +101,8 @@
         $("#tabEditForm").dialog('open');
     });
 
-    $("#menuNav").sortable({
-        placeholder: "ui-state-highlight"
-    });
 
     $("#menuNav").disableSelection();
-
-   
-    $('.tooltp').tooltip();
 
     $("#tabListEdit").sortable({
         placeholder: "ui-state-highlight"
