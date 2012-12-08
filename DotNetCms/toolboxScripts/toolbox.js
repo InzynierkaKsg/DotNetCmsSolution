@@ -100,10 +100,7 @@
         $("#tabEditForm").data('option', 2);
         $("#tabEditForm").dialog('open');
     });
-
-
-    $("#menuNav").disableSelection();
-
+    
     $("#tabListEdit").sortable({
         placeholder: "ui-state-highlight"
     });
