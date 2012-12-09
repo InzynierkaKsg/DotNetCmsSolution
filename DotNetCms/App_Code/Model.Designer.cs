@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 
 using System;
-using System.ComponentModel;
-using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Linq;
-using System.Runtime.Serialization;
+using System.Data.EntityClient;
+using System.ComponentModel;
 using System.Xml.Serialization;
+using System.Runtime.Serialization;
 
 [assembly: EdmSchemaAttribute()]
+
 namespace Model
 {
     #region Contexts
@@ -98,7 +98,6 @@ namespace Model
         private ObjectSet<AllPages> _AllPagesSet;
 
         #endregion
-
         #region AddTo Methods
     
         /// <summary>
@@ -118,11 +117,11 @@ namespace Model
         }
 
         #endregion
-
     }
+    
 
     #endregion
-
+    
     #region Entities
     
     /// <summary>
@@ -155,7 +154,6 @@ namespace Model
         }
 
         #endregion
-
         #region Primitive Properties
     
         /// <summary>
@@ -282,7 +280,6 @@ namespace Model
         partial void OnColorBChanged();
 
         #endregion
-
     
     }
     
@@ -312,7 +309,6 @@ namespace Model
         }
 
         #endregion
-
         #region Primitive Properties
     
         /// <summary>
@@ -389,13 +385,83 @@ namespace Model
         private global::System.String _Content;
         partial void OnContentChanging(global::System.String value);
         partial void OnContentChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Marker_x
+        {
+            get
+            {
+                return _Marker_x;
+            }
+            set
+            {
+                OnMarker_xChanging(value);
+                ReportPropertyChanging("Marker_x");
+                _Marker_x = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Marker_x");
+                OnMarker_xChanged();
+            }
+        }
+        private global::System.String _Marker_x;
+        partial void OnMarker_xChanging(global::System.String value);
+        partial void OnMarker_xChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Marker_y
+        {
+            get
+            {
+                return _Marker_y;
+            }
+            set
+            {
+                OnMarker_yChanging(value);
+                ReportPropertyChanging("Marker_y");
+                _Marker_y = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Marker_y");
+                OnMarker_yChanged();
+            }
+        }
+        private global::System.String _Marker_y;
+        partial void OnMarker_yChanging(global::System.String value);
+        partial void OnMarker_yChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Marker_comment
+        {
+            get
+            {
+                return _Marker_comment;
+            }
+            set
+            {
+                OnMarker_commentChanging(value);
+                ReportPropertyChanging("Marker_comment");
+                _Marker_comment = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Marker_comment");
+                OnMarker_commentChanged();
+            }
+        }
+        private global::System.String _Marker_comment;
+        partial void OnMarker_commentChanging(global::System.String value);
+        partial void OnMarker_commentChanged();
 
         #endregion
-
     
     }
 
     #endregion
-
     
 }

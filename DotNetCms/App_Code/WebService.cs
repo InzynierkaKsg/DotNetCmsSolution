@@ -7,6 +7,7 @@ using Model;
 using System.Web.Security;
 using System.IO;
 using AdminModel;
+using System.Web.Script.Services;
 
 /// <summary>
 /// Summary description for WebService
@@ -63,6 +64,39 @@ public class WebService : System.Web.Services.WebService {
         
     }
 
+    [WebMethod]
+    public void AddMarker(int siteId, string markerX, string markerY, string comment)
+    {
+        ModelContainer1 mc = new ModelContainer1();
+        var page = (from x in mc.PageSet where x.Id == siteId select x).First();
+        page.Marker_x = markerX;
+        page.Marker_y = markerY;
+        page.Marker_comment = comment;
+
+        mc.SaveChanges();
+    }
+
+    [WebMethod]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+    public string GetMarker(int id)
+    {
+        ModelContainer1 mc = new ModelContainer1();
+        var page = (from x in mc.PageSet where x.Id == id select x).First();
+        string value = page.Marker_x + ";;;" + page.Marker_y + ";;;" + page.Marker_comment;
+        return value;
+    }
+
+    [WebMethod]
+    public void DeleteMarker(int siteId)
+    {
+        ModelContainer1 mc = new ModelContainer1();
+        var page = (from x in mc.PageSet where x.Id == siteId select x).First();
+        page.Marker_x = null;
+        page.Marker_y = null;
+        page.Marker_comment = null;
+
+        mc.SaveChanges();
+    }
 
     [WebMethod]
     public int GetLastPage()

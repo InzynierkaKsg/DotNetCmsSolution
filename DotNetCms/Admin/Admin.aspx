@@ -28,7 +28,6 @@
     <script type="text/javascript" src="../toolboxScripts/dialogEditTabsForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogEditPictureForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogForm.js"></script>
-    <script type="text/javascript" src="../toolboxScripts/dialogMapForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogPagesForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogPictureForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogTabsForm.js"></script>
@@ -41,7 +40,9 @@
     <script type="text/javascript" src="../jquery-ui-map/jquery.ui.map.extensions.js"></script>
 
     <script type="text/javascript" src="../jHtmlArea/scripts/jHtmlArea-0.7.5.js"></script>
-
+    
+    <script type="text/javascript" src="../chooseProperImgSrc.js"></script>
+    <script type="text/javascript" src="../addMapAdmin.js"></script>
     <script type="text/javascript" src="../jquery.highlightEdit.js"></script>
     <script type="text/javascript" src="../hover.js"></script>
     <script type="text/javascript" src="../refresh.js"></script>

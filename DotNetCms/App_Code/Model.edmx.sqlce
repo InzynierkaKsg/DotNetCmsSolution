@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server Compact Edition
 -- --------------------------------------------------
--- Date Created: 11/21/2012 22:18:44
--- Generated from EDMX file: C:\Users\Rafalek\Desktop\gicior\DotNetCms\App_Code\Model.edmx
+-- Date Created: 12/06/2012 00:37:03
+-- Generated from EDMX file: C:\Users\Tymek\Documents\GitHub\DotNetCmsSolution\DotNetCms\App_Code\Model.edmx
 -- --------------------------------------------------
 
 
@@ -31,7 +31,10 @@ GO
 CREATE TABLE [PageSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(4000)  NOT NULL,
-    [Content] ntext  NOT NULL
+    [Content] nvarchar(4000)  NOT NULL,
+    [Marker_x] nvarchar(4000)  NULL,
+    [Marker_y] nvarchar(4000)  NULL,
+    [Marker_comment] nvarchar(4000)  NULL
 );
 GO
 

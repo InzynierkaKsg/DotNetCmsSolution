@@ -16,6 +16,9 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" Nullable="false" />
     <Property Name="Content" Type="nvarchar" Nullable="false" />
+    <Property Name="Marker_x" Type="nvarchar" Nullable="true" />
+    <Property Name="Marker_y" Type="nvarchar" Nullable="true" />
+    <Property Name="Marker_comment" Type="nvarchar" Nullable="true" />
   </EntityType>
   <EntityType Name="AllPagesSet">
     <Key>
@@ -42,6 +45,9 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" Nullable="false" />
           <Property Type="String" Name="Content" Nullable="false" />
+          <Property Type="String" Name="Marker_x" Nullable="true" />
+          <Property Type="String" Name="Marker_y" Nullable="true" />
+          <Property Type="String" Name="Marker_comment" Nullable="true" />
         </EntityType>
         <EntityType Name="AllPages">
           <Key>
@@ -65,6 +71,9 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Marker_x" ColumnName="Marker_x" />
+          <ScalarProperty Name="Marker_y" ColumnName="Marker_y" />
+          <ScalarProperty Name="Marker_comment" ColumnName="Marker_comment" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -98,8 +107,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model" >
-        <EntityTypeShape EntityType="Model.Page" Width="1.5" PointX="4.875" PointY="1.5" Height="1.787985026041667" />
-        <EntityTypeShape EntityType="Model.AllPages" Width="1.5" PointX="6.875" PointY="1.5" />
+        <EntityTypeShape EntityType="Model.Page" Width="1.5" PointX="4.375" PointY="1.375" Height="2.172587890625" />
+        <EntityTypeShape EntityType="Model.AllPages" Width="1.5" PointX="7" PointY="1.375" Height="1.9802864583333331" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

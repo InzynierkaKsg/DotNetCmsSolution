@@ -9,7 +9,6 @@ $(function () {
         active: false
     });
 
-  
     for (var i = 0; i < elementy.length; i++)
         elementy[i].removeAttribute('style');
 });

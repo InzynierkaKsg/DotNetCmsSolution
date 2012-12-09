@@ -43,9 +43,24 @@
                     $("#tabForm").dialog('open');
                     break;
                 case 'map':
-                    $("#mapForm").data('item', newItem);
-                    $("#mapForm").dialog('open');
-                    break;   
+                    var cnv = $('#mapCanvas');
+                    if (cnv.length === 0) {
+                        newItem.addClass("mapViewer");
+                        $(".mapViewer").html('<div id="mapCanvas" style="border: 3px solid grey;"></div><div id="mapViewerDelete"></div>');
+                        $("#mapCanvas").css({
+                            width: '100%',
+                            height: '300px'
+                        });
+
+                        $("#mapViewerDelete").css({
+                            visibility: 'hidden' 
+                        });
+                        addMap(0);
+                    }
+                    else {
+                        alert('Cannot open second map on the same site.');
+                    }
+                    break;
             }
         }
     });
@@ -107,7 +122,7 @@
 
     $("#menuNav").disableSelection();
 
-   
+
     $('.tooltp').tooltip();
 
     $("#tabListEdit").sortable({

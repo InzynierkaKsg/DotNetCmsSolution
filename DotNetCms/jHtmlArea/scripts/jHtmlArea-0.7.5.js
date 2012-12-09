@@ -282,7 +282,7 @@
             css: "datebutton",
             text: "Dodaj dzisiejszą datę",
             action: function (btn) {
-                var months = new Array("styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień");
+                var months = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
                 var date = new Date();
                 var currentDay = date.getDate();
                 var currentMonth = date.getMonth();
