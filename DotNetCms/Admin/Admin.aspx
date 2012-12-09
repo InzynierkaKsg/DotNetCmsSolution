@@ -53,6 +53,16 @@
     <script type="text/javascript">
         $(function () {
             $('#logout').click(function () {
+                $("#mapViewerDelete").css({
+                    width: '0%',
+                    height: '0px',
+                    visibility: 'hidden'
+                });
+                var mapDeleteDiv = document.getElementById('mapViewerDelete');
+                if (mapDeleteDiv != null) {
+                    mapDeleteDiv.innerHTML = "";
+                }
+
                 WebService.LogOut(callback);
 
                 function callback(result) { if (result == true) window.location.replace("../Login.aspx"); }

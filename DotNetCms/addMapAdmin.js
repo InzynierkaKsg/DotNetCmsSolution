@@ -1,6 +1,7 @@
 ﻿var mapCountry;
 var mapState;
 var mapAddress;
+var mapComment;
 function addMap(option) {
 
     $('#mapCanvas').gmap({'disableDefaultUI': false, 'streetViewControl': false, 'draggable': false, 'mapTypeControl': false }).bind('init', function (event, map) {
@@ -23,7 +24,7 @@ function addMap(option) {
                     'bounds': false,
                     'icon': '/DotNetCms/images/map_icon.png'
                 }, function (map, marker) {
-                    $('#mapMarkerDialog').append('<form id="mapMarkerDialog' + marker.__gm_id + '" method="get" action="/" style="display:none;"><p><label for="country">Country</label><input id="country' + marker.__gm_id + '" class="txt" name="country" value=""/></p><p><label for="state">State</label><input id="state' + marker.__gm_id + '" class="txt" name="state" value=""/></p><p><label for="address">Address</label><input id="address' + marker.__gm_id + '" class="txt" name="address" value=""/></p><p><label for="comment">Comment</label><textarea id="comment" class="txt" name="comment" cols="40" rows="5" style="border: 1px solid grey;"></textarea></p></form>');
+                    $('#mapMarkerDialog').append('<form id="mapMarkerDialog' + marker.__gm_id + '" method="get" action="/" style="display:none;"><p><label for="country">Country</label><input id="country' + marker.__gm_id + '" class="txt" name="country" value=""/></p><p><label for="state">State</label><input id="state' + marker.__gm_id + '" class="txt" name="state" value=""/></p><p><label for="address">Address</label><input id="address' + marker.__gm_id + '" class="txt" name="address" value=""/></p><p><label for="comment">Comment</label><textarea id="comment' + marker.__gm_id + '" class="txt" name="comment" cols="40" rows="5" style="border: 1px solid grey;"></textarea></p></form>');
                     findLocation(marker.getPosition(), marker);
                 }).click(function () {
                     openDialog(this);
@@ -52,16 +53,10 @@ function addMap(option) {
             var markerStringSplit = markerString.split(";;;");
             var lng = markerStringSplit[0];
             var lat = markerStringSplit[1];
-            var comment = markerStringSplit[2];
+            var commnt = markerStringSplit[2];
             var country1 = markerStringSplit[3];
             var state1 = markerStringSplit[4];
             var address1 = markerStringSplit[5];
-
-            if (country1 != "undefined") {
-                mapCountry = country1;
-                mapState = state1;
-                mapAddress = address1;
-            }
 
             if (lng == "" || lng == null || lat =="" || lat == null) {
                 addMarkerOption1(event, map);
@@ -75,8 +70,9 @@ function addMap(option) {
                     'bounds': false,
                     'icon': '/DotNetCms/images/map_icon.png'
                 }, function (map, marker) {
-                    $('#mapMarkerDialog').append('<form id="mapMarkerDialog' + marker.__gm_id + '" method="get" action="/" style="display:none;"><p><label for="country">Country</label><input id="country' + marker.__gm_id + '" class="txt" name="country" value=""/></p><p><label for="state">State</label><input id="state' + marker.__gm_id + '" class="txt" name="state" value=""/></p><p><label for="address">Address</label><input id="address' + marker.__gm_id + '" class="txt" name="address" value=""/></p><p><label for="comment">Comment</label><textarea id="comment" class="txt" name="comment" cols="40" rows="5" style="border: 1px solid grey;"></textarea></p></form>');
-                    $('#comment').append(comment);
+                    $('#mapMarkerDialog').append('<form id="mapMarkerDialog' + marker.__gm_id + '" method="get" action="/" style="display:none;"><p><label for="country">Country</label><input id="country' + marker.__gm_id + '" class="txt" name="country" value=""/></p><p><label for="state">State</label><input id="state' + marker.__gm_id + '" class="txt" name="state" value=""/></p><p><label for="address">Address</label><input id="address' + marker.__gm_id + '" class="txt" name="address" value=""/></p><p><label for="comment">Comment</label><textarea id="comment' + marker.__gm_id + '" class="txt" name="comment" cols="40" rows="5" style="border: 1px solid grey;"></textarea></p></form>');
+
+                    $('#comment' + marker.__gm_id).val(commnt);
                     $('#country' + marker.__gm_id).val(country1);
                     $('#state' + marker.__gm_id).val(state1);
                     $('#address' + marker.__gm_id).val(address1);
@@ -116,8 +112,10 @@ function addMap(option) {
             },
             'buttons': {
                 "Save": function () {
-                    //var comm = $('#comment').val();
-                    var comm = document.getElementById('comment').value;
+                    var comm = $('#comment' + marker.__gm_id).val();
+                    if (comm === null) {
+                        comm = $('#comment' + marker.__gm_id).text();
+                    }
                     document.getElementById('mapViewerDelete').innerHTML = "";
 
                     var pos = marker.getPosition();
@@ -154,7 +152,7 @@ function addMap(option) {
             },
             close: function () {
                 if (isChanged) {
-                    
+
                 }
             }
         });

@@ -13,4 +13,6 @@ $(function () {
         elementy[i].removeAttribute('style');
 
     $('.tooltp').tooltip();
+
+    addMap(1);
 });
