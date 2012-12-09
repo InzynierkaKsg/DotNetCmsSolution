@@ -32,23 +32,25 @@ $(function () {
                     bValid = checkLength(url, "Url", 1);
                 }
                 else {
-                    addres = "/DotNetCms/images/original_" + selectedFile[0].name;
                     bValid = checkLength(file, "File path", 1);
+                    if (bValid) {
+                        addres = "/DotNetCms/images/original_" + selectedFile[0].name;
 
-                    var data = new FormData();
-                    data.append(selectedFile[0].name, selectedFile[0]);
+                        var data = new FormData();
+                        data.append(selectedFile[0].name, selectedFile[0]);
 
-                    $.ajax({
-                        type: "POST",
-                        url: "../FileUploaderHandler.ashx",
-                        contentType: false,
-                        processData: false,
-                        data: data,
-                        error: function () {
-                            alert("There was error uploading files!");
-                            bValid = false;
-                        }
-                    });
+                        $.ajax({
+                            type: "POST",
+                            url: "../FileUploaderHandler.ashx",
+                            contentType: false,
+                            processData: false,
+                            data: data,
+                            error: function () {
+                                alert("There was error uploading files!");
+                                bValid = false;
+                            }
+                        });
+                    }
                 }
 
                 if (bValid) {
@@ -87,13 +89,12 @@ $(function () {
                 if ($(this).data('logo'))
                     $("#logo").load(location.href + " #logo>*", '');
                 else
-                    if ($('#selectedPictureEdit')[0].childNodes[0].data == "Select File")
-                        $("#contentUL").load(location.href + " #contentUL>*", function () {
-                            $('.tooltp').tooltip();
-                            $.getScript("../refresh.js");
-                        });
-                    else
+
+                    $("#contentUL").load(location.href + " #contentUL>*", function () {
+                        $('.tooltp').tooltip();
                         $.getScript("../refresh.js");
+                    });
+
             }
 
             $('#selectFilePictureEdit').css('display', 'none');

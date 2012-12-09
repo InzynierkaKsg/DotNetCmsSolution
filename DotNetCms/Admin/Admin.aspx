@@ -28,11 +28,8 @@
     <script type="text/javascript" src="../toolboxScripts/dialogEditTabsForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogEditPictureForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogForm.js"></script>
-<<<<<<< HEAD
-=======
+
     <script src="../toolboxScripts/dialogAdminForm.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../toolboxScripts/dialogMapForm.js"></script>
->>>>>>> 0f3cf1d65f66669835ccc6af91a57e73cb878433
     <script type="text/javascript" src="../toolboxScripts/dialogPagesForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogPictureForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogTabsForm.js"></script>
@@ -45,7 +42,7 @@
     <script type="text/javascript" src="../jquery-ui-map/jquery.ui.map.extensions.js"></script>
 
     <script type="text/javascript" src="../jHtmlArea/scripts/jHtmlArea-0.7.5.js"></script>
-    
+
     <script type="text/javascript" src="../chooseProperImgSrc.js"></script>
     <script type="text/javascript" src="../addMapAdmin.js"></script>
     <script type="text/javascript" src="../jquery.highlightEdit.js"></script>
@@ -59,7 +56,7 @@
                 WebService.LogOut(callback);
 
                 function callback(result) { if (result == true) window.location.replace("../Login.aspx"); }
-               
+
             });
         });
     </script>
@@ -117,14 +114,6 @@
                     </ul>
                 </div>
             </div>
-
-         <%--   <div class="row">
-                <div class="twelve columns">
-                    <p id="footer">
-                        Stopka
-                    </p>
-                </div>
-            </div>--%>
         </div>
 
         <div id="currentPage" style="display: none"><%= PageId%></div>

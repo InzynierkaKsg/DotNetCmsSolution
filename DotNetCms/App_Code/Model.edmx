@@ -107,13 +107,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model" >
-<<<<<<< HEAD
-        <EntityTypeShape EntityType="Model.Page" Width="1.5" PointX="4.375" PointY="1.375" Height="2.172587890625" />
-        <EntityTypeShape EntityType="Model.AllPages" Width="1.5" PointX="7" PointY="1.375" Height="1.9802864583333331" />
-=======
+
         <EntityTypeShape EntityType="Model.Page" Width="1.5" PointX="4.75" PointY="1.625" Height="1.59568359375" />
         <EntityTypeShape EntityType="Model.AllPages" Width="1.5" PointX="6.5" PointY="1.375" Height="1.9802864583333331" />
->>>>>>> 0f3cf1d65f66669835ccc6af91a57e73cb878433
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

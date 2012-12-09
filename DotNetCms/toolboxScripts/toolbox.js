@@ -115,27 +115,10 @@
         $("#tabEditForm").data('option', 2);
         $("#tabEditForm").dialog('open');
     });
-<<<<<<< HEAD
 
-    $("#menuNav").sortable({
-        placeholder: "ui-state-highlight"
-    });
-
-    $("#menuNav").disableSelection();
-
-
-    $('.tooltp').tooltip();
-
-=======
-    
->>>>>>> 0f3cf1d65f66669835ccc6af91a57e73cb878433
     $("#tabListEdit").sortable({
         placeholder: "ui-state-highlight"
     });
 
     $("#tabListEdit").disableSelection();
-
-    if (map) {
-        google.maps.event.trigger(map, 'resize');
-    }
 });

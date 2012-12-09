@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
-
 namespace Model
 {
     #region Contexts
@@ -98,6 +98,7 @@ namespace Model
         private ObjectSet<AllPages> _AllPagesSet;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -117,11 +118,11 @@ namespace Model
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -154,6 +155,7 @@ namespace Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -280,6 +282,7 @@ namespace Model
         partial void OnColorBChanged();
 
         #endregion
+
     
     }
     
@@ -309,6 +312,7 @@ namespace Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -459,9 +463,11 @@ namespace Model
         partial void OnMarker_commentChanged();
 
         #endregion
+
     
     }
 
     #endregion
+
     
 }

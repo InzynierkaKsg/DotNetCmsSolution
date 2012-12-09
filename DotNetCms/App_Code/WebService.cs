@@ -7,12 +7,9 @@ using Model;
 using System.Web.Security;
 using System.IO;
 using AdminModel;
-<<<<<<< HEAD
 using System.Web.Script.Services;
-=======
 using System.Security.Cryptography;
 using System.Text;
->>>>>>> 0f3cf1d65f66669835ccc6af91a57e73cb878433
 
 /// <summary>
 /// Summary description for WebService
