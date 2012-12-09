@@ -19,3 +19,18 @@ function checkLength(o, n, min) {
         return true;
     }
 }
+
+function checkPassword(pass, passRepeat) {
+    if (pass.val().toString() == passRepeat.val().toString()) 
+    {
+      pass.removeClass("ui-state-error");
+        return true;
+    }
+    else {
+        pass.addClass("ui-state-error");
+        updateTips("Passwords are different!");
+        return false;
+    }
+
+
+}

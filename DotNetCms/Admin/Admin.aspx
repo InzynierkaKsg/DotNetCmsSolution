@@ -28,6 +28,11 @@
     <script type="text/javascript" src="../toolboxScripts/dialogEditTabsForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogEditPictureForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogForm.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="../toolboxScripts/dialogAdminForm.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../toolboxScripts/dialogMapForm.js"></script>
+>>>>>>> 0f3cf1d65f66669835ccc6af91a57e73cb878433
     <script type="text/javascript" src="../toolboxScripts/dialogPagesForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogPictureForm.js"></script>
     <script type="text/javascript" src="../toolboxScripts/dialogTabsForm.js"></script>
@@ -51,8 +56,10 @@
     <script type="text/javascript">
         $(function () {
             $('#logout').click(function () {
-                WebService.LogOut();
-                window.location.replace("../Login.aspx");
+                WebService.LogOut(callback);
+
+                function callback(result) { if (result == true) window.location.replace("../Login.aspx"); }
+               
             });
         });
     </script>
@@ -67,7 +74,7 @@
                             <li id="contentColor"><a class="hov" href="#">Color</a></li>
                             <li id="addPage"><a class="hov" href="#">Add Page</a></li>
                             <li id="pages"><a class="hov" href="#">Pages</a></li>
-                            <li id="admin"><a class="hov" href="#">Admin</a></li>
+                            <li id="adminek"><a class="hov" href="#">Admin</a></li>
                             <li id="logout"><a class="hov" href="#">LogOut</a></li>
                         </ul>
                     </nav>
@@ -111,13 +118,13 @@
                 </div>
             </div>
 
-            <div class="row">
+         <%--   <div class="row">
                 <div class="twelve columns">
                     <p id="footer">
                         Stopka
                     </p>
                 </div>
-            </div>
+            </div>--%>
         </div>
 
         <div id="currentPage" style="display: none"><%= PageId%></div>
@@ -127,6 +134,7 @@
             </Services>
         </asp:ScriptManager>
 
+        <div id="adminekForm" title="Admin"></div>
         <div id="pictureForm" title="Add picture"></div>
         <div id="pictureFormEdit" title="Save picture"></div>
         <div id="tabForm" title="Titles"></div>

@@ -7,7 +7,12 @@ using Model;
 using System.Web.Security;
 using System.IO;
 using AdminModel;
+<<<<<<< HEAD
 using System.Web.Script.Services;
+=======
+using System.Security.Cryptography;
+using System.Text;
+>>>>>>> 0f3cf1d65f66669835ccc6af91a57e73cb878433
 
 /// <summary>
 /// Summary description for WebService
@@ -41,15 +46,38 @@ public class WebService : System.Web.Services.WebService {
     {
         AdminModelContainer mc = new AdminModelContainer();
         var admin = (from x in mc.AdminSet select x).First();
-        admin.Password = password;
+
+        admin.Password = EncodePassword(password);
         mc.SaveChanges();
+    }
+
+    
+    public string EncodePassword(string originalPassword)
+    {
+        Byte[] originalBytes;
+        Byte[] encodedBytes;
+        MD5 md5;
+
+        md5 = new MD5CryptoServiceProvider();
+        originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
+        encodedBytes = md5.ComputeHash(originalBytes);
+
+        return BitConverter.ToString(encodedBytes);
     }
 
 
     [WebMethod]
-    public void LogOut()
+    public bool LogOut()
     {
-        FormsAuthentication.SignOut();
+        try
+        {
+            FormsAuthentication.SignOut();
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 
     [WebMethod]
@@ -58,7 +86,7 @@ public class WebService : System.Web.Services.WebService {
         ModelContainer1 mc = new ModelContainer1();
         var newPage = new Page();
         newPage.Name = name;
-        newPage.Content = "<li class='editable'>Witaj na nowej stronie!</li>";
+        newPage.Content = "<li class='editable'>Welcome to the new site!</li><li>&#160;</li>";
         mc.AddToPageSet(newPage);
         mc.SaveChanges();
         

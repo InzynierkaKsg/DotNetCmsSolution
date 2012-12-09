@@ -53,4 +53,13 @@ $(function () {
         + '<label>Name of page</label>'
         + '<input type="text" id="newPage" value="" class="ui-widget-content ui-corner-all" /></form>').appendTo('#addPageForm');
 
+
+
+    //formularz admina
+    $('<p class="validateTips"></p><form>'
+        + '<label>New password:</label>'
+        + '<input type="password" id="newPassword" value="" class="ui-widget-content ui-corner-all" />'
+        + '<label>Repeat password:</label>'
+        + '<input type="password" id="newPasswordRepeat" value="" class="ui-widget-content ui-corner-all" /></form>').appendTo('#adminekForm');
+
 });

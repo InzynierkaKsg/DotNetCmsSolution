@@ -78,11 +78,13 @@ $(function () {
             allFields.val("").removeClass("ui-state-error");
 
             if (isChanged)
-                $("#contentUL").load(location.href + " #contentUL>*", function () {
-                    $('.tooltp').tooltip();
-                    $.getScript("../hover.js");
+                if ($('#selectedPictureEdit')[0].childNodes[0].data == "Select File")
+                    $("#contentUL").load(location.href + " #contentUL>*", function () {
+                        $('.tooltp').tooltip();
+                        $.getScript("../refresh.js");
+                    });
+                else
                     $.getScript("../refresh.js");
-                });
         }
     });
 
