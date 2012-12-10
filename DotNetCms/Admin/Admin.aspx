@@ -43,7 +43,7 @@
 
     <script type="text/javascript" src="../jHtmlArea/scripts/jHtmlArea-0.7.5.js"></script>
 
-    <script type="text/javascript" src="../chooseProperImgSrc.js"></script>
+    <script type="text/javascript" src="../chooseProperImgSrcAdmin.js"></script>
     <script type="text/javascript" src="../addMapAdmin.js"></script>
     <script type="text/javascript" src="../jquery.highlightEdit.js"></script>
     <script type="text/javascript" src="../hover.js"></script>

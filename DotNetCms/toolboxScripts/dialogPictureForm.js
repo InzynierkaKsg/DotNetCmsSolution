@@ -36,7 +36,7 @@ $(function () {
                 else {
                     bValid = checkLength(file, "File path", 1);
                     if (bValid) {
-                        addres = "/DotNetCms/images/original_" + selectedFile[0].name;
+                        addres = "../images/original_" + selectedFile[0].name;
 
                         var data = new FormData();
                         data.append(selectedFile[0].name, selectedFile[0]);

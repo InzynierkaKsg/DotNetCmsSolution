@@ -1,0 +1,52 @@
+﻿body {
+}
+
+#loginLogo 
+{
+    width: 402px;
+    height: 38px;
+    margin: 0 auto;
+    margin-top: 200px;
+    position: relative;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
+    background: #19c60f; /* Old browsers */
+    background: -moz-linear-gradient(top,  #19c60f 0%, #0b9110 49%, #22ba0e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#19c60f), color-stop(49%,#0b9110), color-stop(100%,#22ba0e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #19c60f 0%,#0b9110 49%,#22ba0e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #19c60f 0%,#0b9110 49%,#22ba0e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #19c60f 0%,#0b9110 49%,#22ba0e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #19c60f 0%,#0b9110 49%,#22ba0e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19c60f', endColorstr='#22ba0e',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+#loginLogo h1 
+{
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    padding: 0;
+    margin: 0;
+    color: White;
+    text-shadow: 2px 2px 2px #2e6b15;
+    filter: dropshadow(color=#2e6b15, offx=2, offy=2);
+}
+
+#logInForm
+{   
+    background-color: #EBFFD6;
+    margin: 0 auto;
+    width: 400px;
+    height: 220px;
+    border: 1px dotted grey;
+    border-top: none;
+}
+
+#logInForm > table 
+{
+    margin: auto;
+    height: 220px;
+}
+

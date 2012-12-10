@@ -11,7 +11,6 @@
                 url: "WebService.asmx/GetMarker",
                 data: "{ 'id': '" + $('#currentPage').text() + "' }",
                 success: function (msg) {
-                    //alert(msg.d);
                     markerString = msg.d;
                 }
             });
@@ -21,11 +20,8 @@
             var lat = markerStringSplit[1];
             var comment = markerStringSplit[2];
             var country1 = markerStringSplit[3];
-            country = country1;
             var state1 = markerStringSplit[4];
-            state = state1;
             var address1 = markerStringSplit[5];
-            address = address1;
 
             if (lng == "" || lng == null || lat == "" || lat == null) {
             }
@@ -36,7 +32,7 @@
                     'position': latlng,
                     'draggable': false,
                     'bounds': false,
-                    'icon': '/DotNetCms/images/map_icon.png',
+                    'icon': 'images/map_icon.png',
                     'title': address1 + "\r\n" + comment
                 });
             }
