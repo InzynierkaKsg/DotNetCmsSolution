@@ -403,6 +403,7 @@
 			                    newTab[y].find('a.aTitles').css('boxShadow', 'inset 0 1px 1px #' + color3 + ', 0 1px 0 #' + color4 + ', 0 -1px 0 #' + color4 + ', 1px 0 0 #' + color4 + ', -1px 0 0 #' + color4);
 			                    newTab[y].find('a.aTitles').css('textShadow', ' 0 2px 1px #' + color2 + ', 0 1px 1px #' + color2);
 			                } else {
+			              		newTab[y].find('a.aTitles').css('background', "#" + hexFromRGB(parseInt(navColor2[1]), parseInt(navColor2[2]), parseInt(navColor2[3])));
 			                    newTab[y].find('a.aTitles').css('filter', "progid:DXImageTransform.Microsoft.gradient( startColorstr='#" + hexFromRGB(parseInt(navColor2[1]), parseInt(navColor2[2]), parseInt(navColor2[3])) + "', endColorstr='#" + color2 + "',GradientType=0 )");
 			                    newTab[y].find('a.aTitles').css('box-shadow', 'inset 0 1px 1px #' + color3 + ', 0 1px 0 #' + color4 + ', 0 -1px 0 #' + color4 + ', 1px 0 0 #' + color4 + ', -1px 0 0 #' + color4);
 			                }
