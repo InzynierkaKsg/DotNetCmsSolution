@@ -31,7 +31,7 @@
      <script type="text/javascript" src="addMap.js"></script>
     <script type="text/javascript" src="hover.js"></script>
     <script type="text/javascript" src="refresh.js"></script>
-    <script type="text/javascript">$(function () { $('.tooltp').attr('title', ''); });</script>
+    <script type="text/javascript">$(window).load(function () { $('.tooltp').attr('title', ''); });</script>
     
     
     <title>DotNetCMS</title>
