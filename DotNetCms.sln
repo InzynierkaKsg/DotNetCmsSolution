@@ -21,7 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetCms", "DotNetCms\", "
 		VWDPort = "5533"
 	EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DotNetCmsInstaller", "DotNetCmsInstaller\DotNetCmsInstaller.vdproj", "{CF92136D-A3EB-4BFE-BA06-A7C23E408E85}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DotNetCmsInstaller", "DotNetCmsInstaller\DotNetCmsInstaller.vdproj", "{7081229C-BE70-4BA7-AB43-86611C67092E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +33,8 @@ Global
 		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{574A9D74-9A82-47F3-B172-9F5856B88B68}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{CF92136D-A3EB-4BFE-BA06-A7C23E408E85}.Debug|Any CPU.ActiveCfg = Debug
-		{CF92136D-A3EB-4BFE-BA06-A7C23E408E85}.Release|Any CPU.ActiveCfg = Release
+		{7081229C-BE70-4BA7-AB43-86611C67092E}.Debug|Any CPU.ActiveCfg = Debug
+		{7081229C-BE70-4BA7-AB43-86611C67092E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
