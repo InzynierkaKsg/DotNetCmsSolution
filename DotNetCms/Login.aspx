@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
      <link href="login.css" rel="stylesheet" type="text/css" />
-     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+     <script type="text/javascript" src="jquery/jquery-1.8.3.js"></script>
      <script type="text/javascript" src="login.js"></script>
      <!--[if gte IE 9]>
       <style type="text/css">

@@ -7,14 +7,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="../jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.css" />
     <link rel="stylesheet" href="../Gumby/css/imports.css" />
     <link rel="stylesheet" href="../colorPicker.css" />
     <link href="../jHtmlArea/style/jHtmlArea.css" rel="stylesheet" type="text/css" />
 
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="../jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetCms", "DotNetCms\", "{DCB7B3EB-F0C2-47E8-AEFB-E159B3385F18}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/DotNetCms"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\GitHub\DotNetCmsSolution\DotNetCms\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DotNetCms\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DotNetCms"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\GitHub\DotNetCmsSolution\DotNetCms\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DotNetCms\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5533"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCB7B3EB-F0C2-47E8-AEFB-E159B3385F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB7B3EB-F0C2-47E8-AEFB-E159B3385F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

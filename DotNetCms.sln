@@ -18,7 +18,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetCms", "DotNetCms\", "
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "5533"
+		VWDPort = "64178"
 	EndProjectSection
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DotNetCmsInstaller", "DotNetCmsInstaller\DotNetCmsInstaller.vdproj", "{7081229C-BE70-4BA7-AB43-86611C67092E}"

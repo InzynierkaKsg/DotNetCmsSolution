@@ -1,5 +1,11 @@
 ﻿function selectProperImageFiles() {
     var winW = document.body.clientWidth;
+
+    var logo = document.getElementById("logo");
+    var logoImg = logo.getElementsByTagName("img");
+    var logoFileName = getFileNameWithoutPrefix(logoImg[0].src);
+    logoImg[0].src = 'images/original_' + logoFileName;
+    
     var contentDiv = document.getElementById("contentUL");
     var images = contentDiv.getElementsByTagName("img");
     for (var j = 0; j < images.length; j++) {
